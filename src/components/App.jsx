@@ -4,6 +4,7 @@ import Header from "./layout/Header";
 import FilterUser from "./listingUsers/FilterUser";
 import UserList from "./listingUsers/UserList";
 import FavoriteList from "./listingUsers/favoriteList/FavoriteList";
+import Footer from "./layout/Footer";
 
 function App() {
   const [allUsers, setAllUsers] = useState([]);
@@ -73,6 +74,7 @@ function App() {
           />
         </section>
       </div>
+      <Footer />
     </>
   );
 }
