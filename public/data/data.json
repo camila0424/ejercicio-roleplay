@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Camila Bedoya",
+    "email": "camila@email.com",
+    "city": "Vitoria Gaasteiz",
+    "phone": "55512345"
+  },
+  {
+    "id": "2",
+    "name": "Cristina Angélica Pérez",
+    "email": "cristina@email.com",
+    "city": "Madrid",
+    "phone": "66612345"
+  },
+  {
+    "id": "3",
+    "name": "Cipactli María Casillas",
+    "email": "cipa@email.com",
+    "city": "Madrid",
+    "phone": "77712345"
+  },
+  {
+    "id": "4",
+    "name": "Paula Castillo",
+    "email": "paulac@email.com",
+    "city": "Barcelona",
+    "phone": "88812345"
+  },
+  {
+    "id": "5",
+    "name": "María Candelaria Zamora",
+    "email": "cande@email.com",
+    "city": "San Sebastián",
+    "phone": "12312345"
+  },
+  {
+    "id": "6",
+    "name": "Roxana Solano",
+    "email": "roxi@email.com",
+    "city": "Bilbao",
+    "phone": "13212345"
+  },
+  {
+    "id": "7",
+    "name": "Patricia Gutiérrez",
+    "email": "patri@email.com",
+    "city": "Tenerife",
+    "phone": "42312345"
+  },
+  {
+    "id": "8",
+    "name": "Jessica Valderrama",
+    "email": "jessi@email.com",
+    "city": "Mondragón",
+    "phone": "48542345"
+  }
+]

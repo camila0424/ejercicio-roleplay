@@ -1,0 +1,10 @@
+@use './core/reset';
+@use '/src/styles/header';
+@use '/src/styles/filterUser';
+@use '/src/styles/user_list';
+@use '/src/styles/favoriteUsers';
+@use '/src/styles/containerList';
+/* Aquí van los estilos */
+body{
+    background-color: rgb(104, 104, 104);
+}

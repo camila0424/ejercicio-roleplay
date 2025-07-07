@@ -1,0 +1,44 @@
+/* Contenedor de las dos listas */
+.layout-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: flex-start;
+  margin-right: 8%;
+
+  &.with-favs {
+    justify-content: space-between;
+  }
+}
+
+
+
+/* Sección de favoritos con 1 columna */
+.favorites-list {
+  flex: 1;
+
+  .favorites_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .user_card {
+    flex: 1 1 100%;
+    min-height: 250px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .users-list .user_card,
+  .favorites-list .user_card {
+    flex: 1 1 100%;
+  }
+}

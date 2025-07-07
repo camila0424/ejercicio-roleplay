@@ -1,0 +1,22 @@
+.filtered-search{
+    background-color: rgba(130, 67, 174, 0.671);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: antiquewhite;
+}
+
+.search_user{
+    background-color: antiquewhite;
+    color: gray;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid 2px rgba(101, 39, 134, 0.765);
+    width: 280px;
+}
+
+.favorites-counter{
+    margin-left: 5%;
+}
