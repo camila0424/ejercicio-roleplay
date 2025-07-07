@@ -2,7 +2,7 @@ function EachUser({ user, isFavorite }) {
   return (
     <>
       <h3 className="name_user_card">
-        Nombre: {user.name} {isFavorite ? "⭐" : ""}
+        {user.name} {isFavorite ? "⭐" : ""}
       </h3>
       <p>Email: {user.email}</p>
       <p>Ciudad: {user.city}</p>

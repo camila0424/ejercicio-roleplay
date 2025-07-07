@@ -54,7 +54,7 @@ function App() {
       >
         {/* Columna 1: Usuarios */}
         <section className="users-list">
-          <h2 className="title_of_section">👥 Todos los usuarios</h2>
+          <h2 className="title_of_section_user">👥 Todos los usuarios</h2>
           <UserList
             allUsers={filteredUsers}
             favorites={favorites}
@@ -66,7 +66,7 @@ function App() {
         <section
           className={`favorites-list ${favorites.length > 0 ? "visible" : ""}`}
         >
-          <h2 className="title_of_section">⭐ Favoritos</h2>
+          <h2 className="title_of_section_favorite">⭐ Favoritos</h2>
           <FavoriteList
             favorites={favorites}
             handleToggleFavorite={handleToggleFavorite}

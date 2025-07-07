@@ -1,7 +1,7 @@
 /* Contenedor de las dos listas */
 .layout-container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
   align-items: flex-start;
   margin-right: 8%;
@@ -34,11 +34,64 @@
 
 @media (max-width: 768px) {
   .layout-container {
-    flex-direction: column;
+    flex-direction: column; /* CAMBIO: cambiar la estructura a columna para móviles */
+    margin-right: 0; /* Quitar margen derecho para móviles */
+    padding: 0 1rem; /* Añadir padding lateral */
   }
 
-  .users-list .user_card,
-  .favorites-list .user_card {
-    flex: 1 1 100%;
+  .listing_users_container {
+    justify-content: center;
+    padding: 0 1rem; /* Ajuste padding para móviles */
+  }
+
+  .user_card {
+    flex: 1 1 100%; /* CAMBIO: tarjetas ocupan todo el ancho */
+    max-width: 100%;
+    height: auto; /* Para que la altura se ajuste al contenido */
+  }
+
+  .favorites-list {
+    max-width: 100%; /* Quita máximo ancho para que use todo el contenedor */
+    margin: 0 auto;
+  }
+
+  .favorite_card {
+    width: 100%; /* CAMBIO: las tarjetas favoritas ocupan todo el ancho */
+    height: auto; /* Altura ajustable */
+  }
+
+  .filtered-search {
+    flex-direction: column; /* CAMBIO: columna para inputs y filtros */
+    gap: 0.75rem; /* Espaciado entre ellos */
+   
+  }
+
+  .search_user {
+    width: 80%; /* Input ocupa todo el ancho */
+  }
+
+  .favorites-counter {
+    margin-left: 0; /* Ajustar márgenes */
+    text-align: center; /* Centrar texto */
+  }
+}
+@media (max-width: 480px) {
+  .title_of_section_user,
+  .title_of_section_favorite {
+    font-size: 1.5rem; /* Texto más pequeño para títulos */
+  }
+
+  .title_users {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+
+  .user_card {
+    padding: 0.8rem; /* Menos padding para ajustar */
+    height: auto; /* Altura flexible */
+  }
+
+  .favorite_card {
+    padding: 0.8rem; /* Menos padding también */
   }
 }

@@ -9,7 +9,7 @@ function FavoriteList({ favorites, handleToggleFavorite }) {
       <ul className="favorites_list">
         {favorites.map((user) => (
           <li
-            className="user_card"
+            className="favorite_card"
             key={user.id}
             onClick={() => handleToggleFavorite(user)}
           >
