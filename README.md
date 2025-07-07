@@ -64,7 +64,7 @@ Esta aplicación refleja mi capacidad para:
 
 ## Contacto
 
-👩‍💻 Soy Camila Bedoya, desarrolladora frontend apasionada por crear experiencias web significativas y modernas.
+👩‍💻 Soy Camila Bedoya, desarrolladora FullStack apasionada por crear experiencias web significativas y modernas.
 Si te interesa este proyecto o quieres colaborar, contáctame:
 
 LinkedIn
