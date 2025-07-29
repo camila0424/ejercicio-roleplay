@@ -41,11 +41,11 @@
 
 ## Vista de la página
 
-    ![Vista General de la App](./public/images/app_listado.png)
+    ![Vista General de la App](./assets/images/app_listado.png)
 
 ## Vista del formulario
 
-    ![Vista del formulario](./public/images/add_user.png)
+    ![Vista del formulario](./assets/images/add_user.png)
 
 ## ¿Por qué este proyecto?
 
