@@ -22,12 +22,11 @@
 
 ## Tecnologías usadas
 
-- React.js (hooks, estado y componentes funcionales) https://img.shields.io/badge/React-18.2-blue
-- SCSS para estilos organizados y modulares https://img.shields.io/badge/SCSS-1.60-pink
-- JavaScript moderno (ES6+) https://img.shields.io/badge/JavaScript-ES6+-yellow
-- Herramientas de build como Vite o Create React App (dependiendo del setup) https://img.shields.io/badge/Vite-4.0-orange
-
-- Local Storage https://img.shields.io/badge/LocalStorage-API-lightgrey y gestión eficiente de la UI
+![React](https://img.shields.io/badge/React-18.2-blue)
+![SCSS](https://img.shields.io/badge/SCSS-1.60-pink)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)
+![Vite](https://img.shields.io/badge/Vite-4.0-orange)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-API-lightgrey)
 
 ---
 
@@ -42,11 +41,11 @@
 
 ## Vista de la página
 
-    ![Vista General de la App](/public/images/app_listado.png)
+    ![Vista General de la App](./public/images/app_listado.png)
 
 ## Vista del formulario
 
-    ![Vista del formulario](/public/images/add_user.png)
+    ![Vista del formulario](./public/images/add_user.png)
 
 ## ¿Por qué este proyecto?
 
