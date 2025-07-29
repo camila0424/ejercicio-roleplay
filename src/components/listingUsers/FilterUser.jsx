@@ -1,3 +1,4 @@
+import CounterFavorites from "./favoriteList/counter/CounterFavorites";
 function FilterUser({ handleInputFilterUser, filterUser, favorites }) {
   return (
     <form className="filtered-search">
@@ -9,7 +10,7 @@ function FilterUser({ handleInputFilterUser, filterUser, favorites }) {
         value={filterUser}
       />
 
-      <div className="favorites-counter">⭐ Favoritos: {favorites.length}</div>
+      <CounterFavorites count={favorites.length} />
     </form>
   );
 }

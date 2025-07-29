@@ -4,6 +4,7 @@ import Header from "./layout/Header";
 import FilterUser from "./listingUsers/FilterUser";
 import UserList from "./listingUsers/UserList";
 import FavoriteList from "./listingUsers/favoriteList/FavoriteList";
+import UserForm from "./form/UserForm";
 import Footer from "./layout/Footer";
 
 function App() {
@@ -11,13 +12,22 @@ function App() {
   const [filterUser, setFilterUser] = useState("");
   const [favorites, setFavorites] = useState([]);
 
+  // Cargar favoritos desde localStorage al iniciar
+  useEffect(() => {
+    const savedFavorites = localStorage.getItem("userFavorites");
+    if (savedFavorites) {
+      setFavorites(JSON.parse(savedFavorites));
+    }
+  }, []);
+
+  // Guardar favoritos en localStorage cuando cambian
+  useEffect(() => {
+    localStorage.setItem("userFavorites", JSON.stringify(favorites));
+  }, [favorites]);
+
   const handleInputFilterUser = (ev) => {
     setFilterUser(ev.target.value);
   };
-
-  const filteredUsers = allUsers.filter((user) =>
-    user.name.toLowerCase().includes(filterUser.toLowerCase())
-  );
 
   const handleToggleFavorite = (user) => {
     const isAlreadyFavorite = favorites.some((fav) => fav.id === user.id);
@@ -26,6 +36,19 @@ function App() {
     } else {
       setFavorites([...favorites, user]);
     }
+  };
+
+  const filteredUsers = allUsers.filter((user) =>
+    user.name.toLowerCase().includes(filterUser.toLowerCase())
+  );
+
+  // Función para agregar nuevo usuario
+  const addNewUser = (newUser) => {
+    const userWithId = {
+      ...newUser,
+      id: Date.now(), // ID único basado en timestamp
+    };
+    setAllUsers([...allUsers, userWithId]);
   };
 
   useEffect(() => {
@@ -41,7 +64,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="app-container">
       <Header />
       <FilterUser
         handleInputFilterUser={handleInputFilterUser}
@@ -49,9 +72,7 @@ function App() {
         favorites={favorites}
       />
       <div
-        className={`layout-container ${
-          favorites.length > 0 ? "with-favs" : ""
-        }`}
+        className={`main-content ${favorites.length > 0 ? "with-favs" : ""}`}
       >
         {/* Columna 1: Usuarios */}
         <section className="users-list">
@@ -64,18 +85,23 @@ function App() {
         </section>
 
         {/* Columna 2: Solo si hay favoritos */}
-        <section
-          className={`favorites-list ${favorites.length > 0 ? "visible" : ""}`}
-        >
-          <h2 className="title_of_section_favorite">⭐ Favoritos</h2>
-          <FavoriteList
-            favorites={favorites}
-            handleToggleFavorite={handleToggleFavorite}
-          />
-        </section>
+        {favorites.length > 0 && (
+          <section className="favorites-section">
+            <h2 className="title_of_section_favorite">
+              ⭐ Favoritos ({favorites.length})
+            </h2>
+            <div className="favorites-container">
+              <FavoriteList
+                favorites={favorites}
+                handleToggleFavorite={handleToggleFavorite}
+              />
+            </div>
+          </section>
+        )}
       </div>
+      <UserForm onAddUser={addNewUser} />
       <Footer />
-    </>
+    </div>
   );
 }
 
