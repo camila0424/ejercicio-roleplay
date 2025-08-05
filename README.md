@@ -34,7 +34,7 @@
 
 1. Clona el repositorio:
 
-   git clone https://github.com/camila0424/ejercicio-roleplay.git
+   git clone https://github.com/camila0424/listado_de_contactos.git
 
 2. Instala las dependencias:
    npm install
